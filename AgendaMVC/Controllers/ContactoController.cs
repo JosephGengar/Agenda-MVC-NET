@@ -20,6 +20,10 @@ namespace AgendaMVC.Controllers
         {
             using (GitAgendaEntities db = new GitAgendaEntities())
             {
+                if(!ModelState.IsValid)
+                {
+                    return View(model);
+                }
                 var Ouser = new tContacto();
                 Ouser.nombre = model.nombre;
                 Ouser.apellido = model.apellido;
