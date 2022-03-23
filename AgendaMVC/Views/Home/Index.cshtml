@@ -9,4 +9,22 @@
 </div>
 
 
-<div>Booenass</div>
+<div  class="row">
+    <div class="col-lg-12">
+        <table class="table table-bordered">
+            <tr>
+                <th>Codigo</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+            </tr>
+                @foreach (var item in Model)
+                {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Nombre</td>
+            <td>@item.Apellido</td>
+        </tr>
+                }
+        </table>
+    </div>
+</div>
