@@ -137,10 +137,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ModeloAgenda.Context.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\ModeloAgenda.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloAgenda.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\ModeloAgenda.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ModeloAgenda.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tContacto.cs">
+      <DependentUpon>ModeloAgenda.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tNumeros.cs">
+      <DependentUpon>ModeloAgenda.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\View\Registers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -157,6 +168,12 @@
     <Content Include="Models\ModeloAgenda.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ModeloAgenda.Context.cs</LastGenOutput>
+      <DependentUpon>ModeloAgenda.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\ModeloAgenda.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModeloAgenda.edmx</DependentUpon>
+      <LastGenOutput>ModeloAgenda.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -164,9 +181,9 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ModeloAgenda.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Models\ModeloAgenda.edmx.diagram">
+    <Content Include="Models\ModeloAgenda.edmx.diagram">
       <DependentUpon>ModeloAgenda.edmx</DependentUpon>
-    </None>
+    </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

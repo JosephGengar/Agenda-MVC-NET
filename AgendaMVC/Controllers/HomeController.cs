@@ -16,9 +16,16 @@ namespace AgendaMVC.Controllers
             List<Registers> lst = new List<Registers>();
             using (GitAgendaEntities db = new GitAgendaEntities())
             {
-               
+                lst = (from d in db.tContacto
+                       orderby d.id
+                       select new Registers
+                       {
+                           Id = d.id,
+                           Nombre = d.nombre,
+                           Apellido = d.apellido
+                       }).ToList();
             }
-                return View();
+            return View(lst);
         }
 
         public ActionResult About()

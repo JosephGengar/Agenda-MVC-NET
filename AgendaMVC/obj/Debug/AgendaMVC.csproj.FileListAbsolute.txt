@@ -84,3 +84,7 @@ C:\Users\José\Desktop\ProyAGitHub\AgendaMVC\AgendaMVC\AgendaMVC\obj\Debug\Agend
 C:\Users\José\Desktop\ProyAGitHub\AgendaMVC\AgendaMVC\AgendaMVC\obj\Debug\AgendaMVC.csproj.CopyComplete
 C:\Users\José\Desktop\ProyAGitHub\AgendaMVC\AgendaMVC\AgendaMVC\obj\Debug\AgendaMVC.dll
 C:\Users\José\Desktop\ProyAGitHub\AgendaMVC\AgendaMVC\AgendaMVC\obj\Debug\AgendaMVC.pdb
+C:\Users\José\Desktop\ProyAGitHub\AgendaMVC\AgendaMVC\AgendaMVC\bin\EntityFramework.dll
+C:\Users\José\Desktop\ProyAGitHub\AgendaMVC\AgendaMVC\AgendaMVC\bin\EntityFramework.SqlServer.dll
+C:\Users\José\Desktop\ProyAGitHub\AgendaMVC\AgendaMVC\AgendaMVC\bin\EntityFramework.xml
+C:\Users\José\Desktop\ProyAGitHub\AgendaMVC\AgendaMVC\AgendaMVC\bin\EntityFramework.SqlServer.xml

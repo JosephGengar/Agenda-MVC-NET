@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="GitAgendaModelStoreContainer" CdmEntityContainer="GitAgendaEntities">
+    <EntitySetMapping Name="tContacto">
+      <EntityTypeMapping TypeName="GitAgendaModel.tContacto">
+        <MappingFragment StoreEntitySet="tContacto">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="apellido" ColumnName="apellido" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tNumeros">
+      <EntityTypeMapping TypeName="GitAgendaModel.tNumeros">
+        <MappingFragment StoreEntitySet="tNumeros">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="numeroDeTelefono" ColumnName="numeroDeTelefono" />
+          <ScalarProperty Name="idContacto" ColumnName="idContacto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

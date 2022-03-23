@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GitAgendaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tContacto">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="apellido" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tNumeros">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="numeroDeTelefono" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="idContacto" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_tNumeros_tContacto">
+    <End Role="tContacto" Type="Self.tContacto" Multiplicity="1" />
+    <End Role="tNumeros" Type="Self.tNumeros" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tContacto">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tNumeros">
+        <PropertyRef Name="idContacto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="GitAgendaModelStoreContainer">
+    <EntitySet Name="tContacto" EntityType="Self.tContacto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tNumeros" EntityType="Self.tNumeros" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_tNumeros_tContacto" Association="Self.FK_tNumeros_tContacto">
+      <End Role="tContacto" EntitySet="tContacto" />
+      <End Role="tNumeros" EntitySet="tNumeros" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
