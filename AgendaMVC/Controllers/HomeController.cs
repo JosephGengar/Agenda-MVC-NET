@@ -10,7 +10,7 @@ using AgendaMVC.Models;
 namespace AgendaMVC.Controllers
 {
     public class HomeController : Controller
-    {
+    {      
         public ActionResult Index()
         {
             List<Registers> lst = new List<Registers>();
@@ -25,7 +25,7 @@ namespace AgendaMVC.Controllers
                            Apellido = d.apellido
                        }).ToList();
             }
-            return View(lst);
+            return View(lst);        
         }
 
         public ActionResult About()

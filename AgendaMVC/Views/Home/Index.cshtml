@@ -9,18 +9,11 @@
             <h2>ASP.NET</h2>
             <p class="lead">Agenda</p>
         </div>
-        <div class="col-md-6">
-            <h3>Agregar Usuario</h3>
-            @using (Html.BeginForm("", "", FormMethod.Post))
-            {
-            @Html.AntiForgeryToken();
-            }
-        </div>
     </div>
 </div>
+<h2>Contactos</h2>
 
-
-<div  class="row">
+<div class="row">
     <div class="col-lg-12">
         <table class="table table-bordered">
             <tr>
@@ -28,14 +21,15 @@
                 <th>Nombre</th>
                 <th>Apellido</th>
             </tr>
-                @foreach (var item in Model)
-                {
-        <tr>
-            <td>@item.Id</td>
-            <td>@item.Nombre</td>
-            <td>@item.Apellido</td>
-        </tr>
-                }
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Nombre</td>
+                    <td>@item.Apellido</td>
+                </tr>
+            }
         </table>
     </div>
 </div>
+

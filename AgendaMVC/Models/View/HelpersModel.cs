@@ -6,10 +6,10 @@ using System.Web;
 
 namespace AgendaMVC.Models.View
 {
-    public class helperModel
+    public class HelpersModel
     {
         [Required]
-        [StringLength (100, ErrorMessage = " el {0} tiene que tener minimo {1} caracter", MinimumLength = 1)]
+        [StringLength(100, ErrorMessage = " el {0} tiene que tener minimo {1} caracter", MinimumLength = 1)]
         [Display(Name = "Nombre")]
         public string nombre { get; set; }
 
